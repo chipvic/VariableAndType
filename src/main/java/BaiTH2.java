@@ -39,6 +39,13 @@ public class BaiTH2 extends HomeWork {
         min(so1, so2, so3, so4);
 
         // Bài 6:
+        int[] arr = nhapMang();
+        upSort(arr);
+        System.out.println("Mảng sau khi sắp xếp: ");
+        for(int i=0; i < arr.length; i++){
+            System.out.println(arr[i]);
+        }
+
         // Bài 7:
         System.out.println("Nhập số Km cần đi: ");
         int km = nhapSoInt();
@@ -138,6 +145,35 @@ public class BaiTH2 extends HomeWork {
         int y = Math.min(c, d);
         int z = Math.min(x, y);
         System.out.println("Min là: " + z);
+    }
+
+    static int[] nhapMang(){
+        int n;
+        System.out.println("Nhập mảng gồm bao nhiêu số nguyên: ");
+        Scanner sc = new Scanner(System.in);
+        n=sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        return arr;
+    }
+
+    static void upSort(int[] arr) {
+        int n = arr.length;
+        int temp = 0;
+        for(int i=0; i < n; i++){
+            for(int j=1; j < (n-i); j++){
+                if(arr[j-1] > arr[j]){
+                    temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                }
+
+            }
+        }
+
     }
 
     static void receipt(int a) {
