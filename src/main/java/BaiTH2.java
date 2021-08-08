@@ -13,6 +13,7 @@ public class BaiTH2 extends HomeWork {
         lowerUpperChar(text);
 
         //Bài 3:
+        System.out.println("Giải phương trình bậc 1:");
         System.out.println("Nhập a: ");
         double a1 = nhapSoDouble();
         System.out.println("Nhập b: ");
@@ -20,6 +21,15 @@ public class BaiTH2 extends HomeWork {
         giaiPT1(a1,b1);
 
         //Bài 4:
+        System.out.println("Giải phương trình bậc 2:");
+        System.out.println("Nhập a: ");
+        double a2 = nhapSoDouble();
+        System.out.println("Nhập b: ");
+        double b2 = nhapSoDouble();
+        System.out.println("Nhập c: ");
+        double c2 = nhapSoDouble();
+        giaiPT2(a2,b2,c2);
+
         //Bài 5:
         System.out.println("Nhập 4 số nguyên:");
         int so1 = nhapSoInt();
@@ -43,10 +53,10 @@ public class BaiTH2 extends HomeWork {
 
         //Bài 9:
         System.out.println("Nhập 3 cạnh của tam giác: ");
-        int c1 = nhapSoInt();
-        int c2 = nhapSoInt();
-        int c3 = nhapSoInt();
-        typeTriangle(c1, c2, c3);
+        int canh1 = nhapSoInt();
+        int canh2 = nhapSoInt();
+        int canh3 = nhapSoInt();
+        typeTriangle(canh1, canh2, canh3);
 
 
     }
@@ -102,6 +112,23 @@ public class BaiTH2 extends HomeWork {
                 System.out.println("Phương trình vô nghiệm");
             } else {
                 System.out.println("Phương trình có nghiệm x: "+(-b/a));
+            }
+        }
+    }
+
+    static void giaiPT2(double a, double b, double c){
+        double delta = ((b*b)-(4*a*c));
+        if (delta <0){
+            System.out.println("Phương trình vô nghiệm");
+        } else{
+            if (delta == 0){
+                double x = (-b/(2*a));
+                System.out.println("Phương trình có nghiệm kép x1 = x2 = "+ x);
+            } else{
+                double x1= ((-b + Math.sqrt(delta))/(2*a));
+                double x2= ((-b - Math.sqrt(delta))/(2*a));
+                System.out.println("Phương trình có nghiệm x1 = " + x1);
+                System.out.println("Phương trình có nghiệm x1 = " + x2);
             }
         }
     }
