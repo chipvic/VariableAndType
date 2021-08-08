@@ -82,7 +82,7 @@ public class HomeWork {
 
     }
 
-    static int nhapSoInt() {
+    public static int nhapSoInt() {
         Scanner myInt = new Scanner(System.in);
         int numInt = myInt.nextInt();
         return numInt;
@@ -98,7 +98,7 @@ public class HomeWork {
 
     ;
 
-    static String nhapChuoi() {
+    public static String nhapChuoi() {
         Scanner prodName = new Scanner(System.in);
         String text = prodName.nextLine();
         return text;
