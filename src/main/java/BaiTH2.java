@@ -162,13 +162,13 @@ public class BaiTH2 extends HomeWork {
 
     static void upSort(int[] arr) {
         int n = arr.length;
-        int temp = 0;
+        int tmp = 0;
         for(int i=0; i < n; i++){
             for(int j=1; j < (n-i); j++){
                 if(arr[j-1] > arr[j]){
-                    temp = arr[j-1];
+                    tmp = arr[j-1];
                     arr[j-1] = arr[j];
-                    arr[j] = temp;
+                    arr[j] = tmp;
                 }
 
             }
