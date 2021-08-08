@@ -23,6 +23,12 @@ public class App {
         boolean b=true;
         boolean b2=false;
 
+        float k = 3.4f;
+        String text = String.valueOf(k);
+        System.out.println("Số "+k);
+        System.out.println("Chuỗi "+text);
+
+
         //Integer a =100;
        // Integer b=200;
        // System.out.println("a="+ a +"b="+b);
