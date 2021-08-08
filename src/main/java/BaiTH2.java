@@ -13,6 +13,12 @@ public class BaiTH2 extends HomeWork {
         lowerUpperChar(text);
 
         //Bài 3:
+        System.out.println("Nhập a: ");
+        double a1 = nhapSoDouble();
+        System.out.println("Nhập b: ");
+        double b1 = nhapSoDouble();
+        giaiPT1(a1,b1);
+
         //Bài 4:
         //Bài 5:
         System.out.println("Nhập 4 số nguyên:");
@@ -86,6 +92,17 @@ public class BaiTH2 extends HomeWork {
             System.out.println(str.toUpperCase());
         } else {
             System.out.println(str.toLowerCase());
+        }
+    }
+    static void giaiPT1(double a, double b){
+        if((a==0) && (b==0)){
+            System.out.println("Phương trình vô số nghiệm");
+        } else{
+            if ((a==0) && (b!=0)){
+                System.out.println("Phương trình vô nghiệm");
+            } else {
+                System.out.println("Phương trình có nghiệm x: "+(-b/a));
+            }
         }
     }
 
