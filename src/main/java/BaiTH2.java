@@ -40,6 +40,7 @@ public class BaiTH2 extends HomeWork {
         int c1 = nhapSoInt();
         int c2 = nhapSoInt();
         int c3 = nhapSoInt();
+        typeTriangle(c1,c2,c3);
 
 
 
@@ -135,6 +136,19 @@ public class BaiTH2 extends HomeWork {
             }
         }
 
+    }
+    static void typeTriangle (int a, int b, int c){
+        if ((a==b)&&(b==c)){
+            System.out.println("Tam giác đều");
+        } else{
+            if ((a==b)||(b==c)||(c==a)){
+                System.out.println("Tam giác cân");
+            } else{
+                if((a*a==b*b+c*c)||(b*b==a*a+c*c)||(c*c==a*a+b*b)){
+                    System.out.println("Tam giác vuông");
+                }
+            }
+        }
     }
 
 }
