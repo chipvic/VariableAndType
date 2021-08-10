@@ -1,48 +1,56 @@
+import java.util.Scanner;
+
 public class App {
-    public static void main (String[] args){
-        String str;
-        str="Data Type";
-        System.out.println(str);
+    public static void main(String[] args) {
+        //BaiTH4
+        //Bài 1:
+        // Câu a:
 
-        final double PI=3.14;
-        System.out.println(PI);
+        int[] n = BaiTH2.nhapMang();
+        if (BaiTH4.isSymmetry(n)) {
+            System.out.println("Số đối xứng");
+        } else {
+            System.out.println("Số không đối xứng");
+        }
+        // Câu b:
+        System.out.println("Nhập số cần kiểm tra: ");
+        int num1 = HomeWork.nhapSoInt();
+        if (BaiTH4.isSquareNum(num1)) {
+            System.out.println("Là số Chính Phương");
+        } else {
+            System.out.println("Không là số Chính Phương");
+        }
 
-        System.out.println("Name\tDOB");
-        short s=10;
-        int i =100;
-        long l =100000000;
-        long l2 =100L;
+        // Bài 2:
+        //Câu d:
+        System.out.println("Nhập số cần tính giai thừa");
+        int num2 = HomeWork.nhapSoInt();
+        int fac = BaiTH4.factorial(num2);
+        System.out.println("Giai thừa là: " + fac);
 
-        float f =3.1f;
-        double d = 5.7;
+        //Câu e:
+        System.out.println("Nhập số cần tính tổng các giai thừa");
+        int num3 = HomeWork.nhapSoInt();
+        int sumFac = BaiTH4.sumFactorial(num3);
+        System.out.println("Tổng các giai thừa là: " + sumFac);
 
-        char c='a';
-        char c2='5';
-        char c3='6';
+        // Bài 4:
+        System.out.println("Nhập số nguyên lớn hơn 0 và nhỏ hơn 50");
+        int num4 = HomeWork.nhapSoInt();
+        if ((num4 <= 0) || (num4 >= 50)) {
+            System.out.println("Số nhập không hợp lệ");
+        } else {
+            int sumPri = BaiTH4.sumPrimeNum(num4);
+            System.out.println("Tổng các số nguyên tố nhỏ hơn n: " + sumPri);
+        }
 
-        boolean b=true;
-        boolean b2=false;
-
-        float k = 3.4f;
-        String text = String.valueOf(k);
-        System.out.println("Số "+k);
-        System.out.println("Chuỗi "+text);
+        // Bài 5:
+        System.out.println("Nhập số nguyên n: ");
+        int num5 = HomeWork.nhapSoInt();
+        int swap = BaiTH4.swapNum(num5);
+        System.out.println("Số sau khi đổi: " + swap);
 
 
-        //Integer a =100;
-       // Integer b=200;
-       // System.out.println("a="+ a +"b="+b);
-        //swap(a,b);
-        //System.out.println("a="+a+"b="+b);
-
-      SimpleSeason sse = SimpleSeason.SPRING;
-       System.out.println(sse);
-    }
-
-    static void swap(Integer a, Integer b){
-        Integer tmp =a;
-        a=b;
-        b=tmp;
-        System.out.println("a="+a+"b="+b);
     }
 }
+

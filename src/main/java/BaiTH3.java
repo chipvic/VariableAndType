@@ -15,9 +15,7 @@ public class BaiTH3 extends HomeWork {
         System.out.println("Nhập năm: ");
         int y = nhapSoInt();
         checkDay(d,m,y);
-
-
-
+        
 
     }
 
