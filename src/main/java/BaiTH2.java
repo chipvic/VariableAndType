@@ -147,7 +147,7 @@ public class BaiTH2 extends HomeWork {
         System.out.println("Min là: " + z);
     }
 
-    static int[] nhapMang(){
+    public static int[] nhapMang(){
         int n;
         System.out.println("Nhập mảng gồm bao nhiêu số nguyên: ");
         Scanner sc = new Scanner(System.in);
