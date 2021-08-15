@@ -40,7 +40,7 @@ public class BaiTH4 {
         return sum;
     }
 
-    static boolean isPrimeNum(int n) {
+    public static boolean isPrimeNum(int n) {
         boolean ret = true;
         for (int i = 2; i < n; i++) {
             if (n % i == 0) {
@@ -51,7 +51,7 @@ public class BaiTH4 {
         return ret;
     }
 
-    static int sumPrimeNum(int a) {
+    public static int sumPrimeNum(int a) {
         int sum = 0;
         for (int i = 1; i < a; i++) {
             if (isPrimeNum(i)) {
@@ -62,7 +62,7 @@ public class BaiTH4 {
 
     }
 
-    static int swapNum(int a) {
+    public static int swapNum(int a) {
         int tmp = 0;
         int swap = 0;
         do {
@@ -73,6 +73,47 @@ public class BaiTH4 {
         return swap;
     }
 
+    public static void findNum() {
+        int j, k;
+        for (int i = 10; i < 100; i++) {
+            j = i / 10;
+            k = i % 10;
+            if (j * k == 2 * (j + k)) {
+                System.out.format("%d ,", i);
+            }
+        }
+    }
+
+    public static int uCLN(int a, int b) {
+        int tmp;
+        if (a >= b) {
+            tmp = b;
+        } else {
+            tmp = a;
+        }
+        for (int i = tmp; i > 0; i--) {
+            if ((a % i == 0) && (b % i == 0)) {
+                return i;
+            }
+
+        }
+        return -1;
+    }
+
+    public static int fibonacci(int num) {
+        int a = 1;
+        int b = 1;
+        int temp;
+
+        while (num > 0) {
+            temp = a;
+            a = a + b;
+            b = temp;
+            num--;
+        }
+
+        return b;
+    }
 
 }
 

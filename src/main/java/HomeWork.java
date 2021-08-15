@@ -3,84 +3,6 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class HomeWork {
-    public static void main(String[] args) {
-
-        // Bài 4
-        System.out.println("Bài 4:");
-        System.out.println("Nhập năm sinh của bạn:");
-        int year = nhapSoInt();
-        tinhTuoi(year);
-
-        // Bài 5
-        System.out.println("Bài 5:");
-        System.out.println("Nhập số a: ");
-        double a = nhapSoDouble();
-        System.out.println("Nhập số b: ");
-        double b = nhapSoDouble();
-        tinhTong(a, b);
-        tinhHieu(a, b);
-        tinhTich(a, b);
-        tinhThuong(a, b);
-
-        //Bài 6
-        System.out.println("Bài 6:");
-        System.out.println("Nhập tên sản phẩm: ");
-        String name = nhapChuoi();
-        System.out.println("Nhập số lượng sản phẩm: ");
-        int quality = nhapSoInt();
-        System.out.println("Nhập đơn giá sản phẩm: ");
-        int price = nhapSoInt();
-
-        System.out.println("Tên sản phẩm là: " + name);
-        int tien = tinhTien(quality, price);
-        System.out.println("Tổng tiền sản phẩm là: " + tien);
-        double thue = tinhThue(tien);
-        System.out.println("Thuế 10% là: " + thue);
-
-        // Bài 7
-        System.out.println("Bài 7:");
-        System.out.println("Nhập điểm Toán: ");
-        double toan = nhapSoDouble();
-        System.out.println("Nhập điểm Lý: ");
-        double ly = nhapSoDouble();
-        System.out.println("Nhập điểm Hóa: ");
-        double hoa = nhapSoDouble();
-        double avg = trungBinh(toan, ly, hoa);
-        System.out.println("Điểm trung bình của học sinh là:" + avg);
-
-        // Bài 8
-        System.out.println("Bài 8:");
-        System.out.println("Nhập bán kính đường tròn: ");
-        double r = nhapSoDouble();
-        double c = chuVi(r);
-        double s = dienTich(r);
-        System.out.println("Chu vi là: " + c);
-        System.out.println("Diện tích là: " + s);
-
-        // Bài 9
-        System.out.println("Bài 9:");
-        System.out.println("Nhập biển số xe của bạn: ");
-        int[] arr = new int[5];
-        int k = 0;
-        for (int i = 0; i < 5; i++) {
-            Scanner myNumber = new Scanner(System.in);
-            int tmp = myNumber.nextInt();
-            arr[i] = tmp;
-            k = k + tmp;
-        }
-        int point = k % 10;
-        System.out.println("Xe của bạn " + point + " nút");
-
-        // Bài 10
-        System.out.println("Bài 10:");
-        System.out.println("Nhập số x: ");
-        double x = nhapSoInt();
-        System.out.println("Nhập số y: ");
-        double y = nhapSoInt();
-        soSanh(x, y);
-
-
-    }
 
     public static int nhapSoInt() {
         Scanner myInt = new Scanner(System.in);
@@ -89,6 +11,7 @@ public class HomeWork {
     }
 
     ;
+
 
     static double nhapSoDouble() {
         Scanner myDouble = new Scanner(System.in);
