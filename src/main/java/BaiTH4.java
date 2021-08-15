@@ -3,10 +3,11 @@ public class BaiTH4 {
     public static boolean isSymmetry(int[] a) {
         int b = a.length;
         boolean result = true;
-        for (int i = 0; i < (b / 2); i++) {
-            for (int j = (b - 1) - i; j > (b / 2); j--) {
+        for (int i = 0; i <= (b / 2); i++) {
+            for (int j = (b - 1)-i; j >= (b / 2); j--) {
                 if (a[i] != a[j]) {
                     result = false;
+                    return result;
                 }
                 break;
             }

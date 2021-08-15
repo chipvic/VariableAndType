@@ -1,23 +1,4 @@
 public class BaiTH3 extends HomeWork {
-    public static void main(String[] args) {
-
-        // Bài 1:
-        System.out.println("Nhập năm: ");
-        int year = nhapSoInt();
-        leapYear(year);
-
-        // Bài 2:
-        // Câu a:
-        System.out.println("Nhập ngày: ");
-        int d = nhapSoInt();
-        System.out.println("Nhập tháng: ");
-        int m = nhapSoInt();
-        System.out.println("Nhập năm: ");
-        int y = nhapSoInt();
-        checkDay(d,m,y);
-        
-
-    }
 
     static void leapYear(int a) {
         if ((a % 400 == 0) || (a % 4 == 0) && (a % 100 != 0)) {
